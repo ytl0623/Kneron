@@ -1,0 +1,5 @@
+https://github.com/kneron/kneron-mmtracking/blob/main/docs_kneron/bytetrack_step_by_step.md
+
+Step 7 (For Kneron AI Competition 2022): Run NEF model on KL720 USB accelerator
+
+python KL720DemoGenericInferenceByteTrack_BypassHwPreProc.py -nef ./example_bytetrack_720.nef -vid ./MOT16-03_trim.mp4
