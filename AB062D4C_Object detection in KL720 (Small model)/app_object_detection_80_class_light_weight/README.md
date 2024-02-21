@@ -54,7 +54,7 @@ $ python -m pip install .\package\{platform}\KneronPLUS-X.X.X-py3-none-any.whl
 $ python -m pip install .\package\{platform}\KneronPLUS_YOLO-X.X.X-py3-none-any.whl
 ```
 
-"""
+```bash
 (kneron) D:\ytl\CCU\Thesis\Kneron\AB062D4C_Object detection in KL720 (Small model)\app_object_detection_80_class_light_weight>python -m pip install ./package\windows\KneronPLUS-1.3.0-py3-none-any.whl
 Processing d:\ytl\ccu\thesis\kneron\ab062d4c_object detection in kl720 (small model)\app_object_detection_80_class_light_weight\package\windows\kneronplus-1.3.0-py3-none-any.whl
 Requirement already satisfied: numpy in d:\anaconda\envs\kneron\lib\site-packages (from KneronPLUS==1.3.0) (1.23.5)
@@ -66,7 +66,7 @@ Requirement already satisfied: KneronPLUS>=1.2.0 in d:\anaconda\envs\kneron\lib\
 Requirement already satisfied: numpy in d:\anaconda\envs\kneron\lib\site-packages (from KneronPLUS>=1.2.0->KneronPLUS-YOLO==1.3.0) (1.23.5)
 Installing collected packages: KneronPLUS-YOLO
 Successfully installed KneronPLUS-YOLO-1.3.0
-"""
+```
 
 ## Quick Start
 
@@ -101,7 +101,7 @@ $ python ScanDevice.py
 
 * Show all connected Kneron AI Devices.
 
-"""
+```bash
 (kneron) D:\ytl\CCU\Thesis\Kneron\AB062D4C_Object detection in KL720 (Small model)\app_object_detection_80_class_light_weight>python ScanDevices.py
 scanning kneron devices ...
 number of Kneron devices found: 1
@@ -115,7 +115,7 @@ listing devices infomation as follows:
 [0] KN number: '0xAB062D4C'
 [0] Connectable: 'True'
 [0] Firmware: 'KDP2 Comp / F'
-"""
+```
 
 ## Common Problem
 * If pip install/run application fails, it may cause by using python 2.X as python interpreter. Please make sure the interpreter and pip is `Python 3` on the host:
