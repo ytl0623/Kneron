@@ -1,0 +1,7 @@
+{
+    "nef_model_path": "models/KL720/YoloV5s_640_640_3/models_720.nef",
+    "ncpu_fw_path": "firmware/KL720/fw_ncpu.bin",
+    "scpu_fw_path": "firmware/KL720/fw_scpu.bin",
+    "logo_img_path": "./resource/kneron.png",
+    "device_type": "KL720"
+}
