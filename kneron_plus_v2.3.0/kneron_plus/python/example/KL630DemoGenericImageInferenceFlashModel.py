@@ -14,7 +14,7 @@ import kp
 import cv2
 
 SCPU_FW_PATH = os.path.join(PWD, '../../res/firmware/KL630/kp_firmware.tar')
-MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_640_640_3/models_630.nef')
+#MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_640_640_3/models_630.nef')
 IMAGE_FILE_PATH = os.path.join(PWD, '../../res/images/bike_cars_street_224x224.bmp')
 LOOP_TIME = 10
 

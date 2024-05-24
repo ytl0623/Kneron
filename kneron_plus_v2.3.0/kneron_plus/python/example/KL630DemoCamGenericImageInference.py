@@ -19,7 +19,8 @@ import cv2
 
 SCPU_FW_PATH = os.path.join(PWD, '../../res/firmware/KL630/kp_firmware.tar')
 #MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_640_640_3/models_630.nef')
-MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_face/yolov5s-face-2_models_630.nef')
+#MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_face/yolov5s-face-2_models_630.nef')
+MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_face/yolov5s-face-1_models_630_0523.nef')
 
 _LOCK = threading.Lock()
 _SEND_RUNNING = True
@@ -152,7 +153,7 @@ def _result_receive_function(_device_group: kp.DeviceGroup) -> None:
                     org=(10, 30),
                     fontFace=cv2.FONT_HERSHEY_DUPLEX,
                     fontScale=1,
-                    color=(200, 200, 200),
+                    color=(100, 100, 100),
                     thickness=1,
                     lineType=cv2.LINE_AA)
         cv2.putText(img=temp_image,
@@ -233,6 +234,7 @@ if __name__ == '__main__':
         print('[Upload Model]')
         model_nef_descriptor = kp.core.load_model_from_file(device_group=device_group,
                                                             file_path=MODEL_FILE_PATH)
+        #model_nef_descriptor = kp.core.load_model_from_flash(device_group=device_group)
         print(' - Success')
 
         print('[Model NEF Information]')

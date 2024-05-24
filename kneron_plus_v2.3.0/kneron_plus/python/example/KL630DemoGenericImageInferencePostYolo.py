@@ -13,11 +13,13 @@ from utils.ExampleHelper import get_device_usb_speed_by_port_id
 from utils.ExamplePostProcess import post_process_yolo_v5
 import kp
 import cv2
+import time
 
 SCPU_FW_PATH = os.path.join(PWD, '../../res/firmware/KL630/kp_firmware.tar')
-MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_640_640_3/models_630.nef')
-IMAGE_FILE_PATH = os.path.join(PWD, '../../res/images/bike_cars_street_224x224.bmp')
-LOOP_TIME = 50
+#MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_640_640_3/models_630.nef')
+MODEL_FILE_PATH = os.path.join(PWD, '../../res/models/KL630/YoloV5s_face/yolov5s-face-1_models_630_0523.nef')
+IMAGE_FILE_PATH = os.path.join(PWD, '../../res/images/a_man_640x480.bmp')
+LOOP_TIME = 500
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='KL630 Demo Generic Image Inference with YOLO Post-Process Example.')
@@ -116,6 +118,9 @@ if __name__ == '__main__':
     print('[Starting Inference Work]')
     print(' - Starting inference loop {} times'.format(LOOP_TIME))
     print(' - ', end='')
+    
+    start_time = time.time()  # Start timing
+    
     for i in range(LOOP_TIME):
         try:
             kp.inference.generic_image_inference_send(device_group=device_group,
@@ -129,6 +134,11 @@ if __name__ == '__main__':
 
         print('.', end='', flush=True)
     print()
+
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    fps = LOOP_TIME / elapsed_time
+    print( f"\nFPS: {fps}\n" )
 
     """
     retrieve inference node output 

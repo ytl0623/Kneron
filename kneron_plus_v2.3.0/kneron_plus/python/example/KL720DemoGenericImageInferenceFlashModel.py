@@ -74,7 +74,7 @@ if __name__ == '__main__':
     prepare the image
     """
     print('[Read Image]')
-    img = cv2.imread(filename=IMAGE_FILE_PATH)
+    img = cv2.imread(filename='../../res/images/car_park_barrier_608x608.bmp')
     img_bgr565 = cv2.cvtColor(src=img, code=cv2.COLOR_BGR2BGR565)
     print(' - Success')
 

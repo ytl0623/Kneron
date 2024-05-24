@@ -184,8 +184,9 @@ if __name__ == '__main__':
     """
     try:
         print('[Upload Model]')
-        model_nef_descriptor = kp.core.load_model_from_file(device_group=device_group,
-                                                            file_path=MODEL_FILE_PATH)
+        #model_nef_descriptor = kp.core.load_model_from_file(device_group=device_group,
+                                                            #file_path=MODEL_FILE_PATH)
+        model_nef_descriptor = kp.core.load_model_from_flash(device_group=device_group)
         print(' - Success')
 
         print('[Model NEF Information]')
